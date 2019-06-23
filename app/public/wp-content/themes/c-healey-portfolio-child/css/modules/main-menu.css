@@ -1,0 +1,28 @@
+
+
+ 
+/*all but home page */
+.main-navigation {
+	float: left;
+
+	.main-menu > li > a {
+  
+    color: #FFF;
+   
+	}
+	.main-menu > li > a:hover {
+  
+    color: #E6AC69;
+   
+	}
+
+/* hate the submenu */
+   .sub-menu {
+    background-color: transparent;
+    color: #fff;
+    }
+
+
+ 
+}
+ 

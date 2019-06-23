@@ -1,0 +1,25 @@
+/*
+Theme Name: c-healey-portfolio-child
+Author:Cathy Healey
+Template: twentynineteen
+Version: 1.0.0
+Text Domain: c-healey-portfolio-child
+*/
+/* 3rd party packages */
+@import "normalize.css"; 
+@import "slick-carousel/slick/slick.css";
+
+/* SASS and Global'ish Stuff */
+@import "base/baseline";
+@import "base/_variables";
+@import "modules/site-header"; 
+@import "modules/_site-branding";
+@import "modules/main-menu";
+@import "modules/_social-icons";
+/* @import "modules/_wrapper"; */
+@import "modules/_reveal-item";
+@import "modules/blog-roll";
+@import "modules/_modal";
+@import "modules/hero-slider";
+@import 'modules/_content-area';
+
