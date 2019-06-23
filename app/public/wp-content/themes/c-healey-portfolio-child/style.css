@@ -415,6 +415,30 @@ p, ul, ol {
 p, li {
   line-height: 1.65;
 }
+.services::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -85px; 
+  height: 85px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+.work::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -85px; 
+  height: 85px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
+.about::before { 
+  display: block; 
+  content: " "; 
+  margin-top: -85px; 
+  height: 85px; 
+  visibility: hidden; 
+  pointer-events: none;
+}
 /*$mainBlue: #2f5572; */
 /* Backgrounds */
 /* lighten( salmon, 22.5% ); // lighten( #0999d4, 48% ); ^/
@@ -570,7 +594,7 @@ p, li {
 	}
 .main-navigation .main-menu > li > a:hover {
   
-    color: #E6AC69;
+    color: #d7d7d7;
    
 	}
 /* hate the submenu */
