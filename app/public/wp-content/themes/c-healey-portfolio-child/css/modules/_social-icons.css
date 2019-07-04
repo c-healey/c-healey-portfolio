@@ -1,8 +1,10 @@
+
+
 .social-icons {
 	text-align:center;
 
 	&__icon {
-		background-color: $mainOrange;
+		background-color: $color__btn-social;
 		display: inline-block;
 		margin: 0 5px 5px 5px;
 		width:33%;

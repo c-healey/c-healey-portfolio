@@ -5,24 +5,18 @@
 .main-navigation {
 	float: left;
 
-	.main-menu > li > a {
-  
-    color: #FFF;
-   
-	}
-	.main-menu > li > a:hover {
-  
-    color: #d7d7d7;
-   
-	}
+    .main-menu {
+        > li {
+            color: $color__top-nav-txt;
+            > a {
+                color: $color__top-nav-txt;
+            }
+            > a:hover {
+                color: $color__top-nav-txt-hover;
+            }
+        }
 
-/* hate the submenu */
-   .sub-menu {
-    background-color: transparent;
-    color: #fff;
     }
-
-
  
 }
  

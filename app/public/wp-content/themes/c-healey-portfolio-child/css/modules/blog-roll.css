@@ -20,7 +20,7 @@
 	.main-navigation a,
 	.main-navigation a + svg,
 	.site-title a {
-		color: $color__background-body;
+		color: $color__top-nav-txt;
 		transition: opacity $link_transition ease-in-out;
 
 		&:hover,
@@ -43,7 +43,7 @@
 
 	.site-branding {  
 		
-		background-color: rgba(23, 51, 72, .85);
+		background-color: rgba($color__top-nav, .85);
 	
 	}
 }

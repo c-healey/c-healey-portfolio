@@ -48,10 +48,16 @@
 				);
 				?>
 				<div class="site-header__btn-container">
-		          <a href="#" class="btn open-modal">Get in Touch</a>
+		          <a href="#" class="open-modal">Contact</a>
+
 		        </div>
+		        
 	        
 		</nav><!-- #site-navigation -->
+		
+
+		
+		
 		</div> <!-- site-header__menu-content-->
 
 	<?php endif; ?>
@@ -70,5 +76,6 @@
 			?>
 		</nav><!-- .social-navigation -->
 	<?php endif; ?>
-</div><!-- .site-branding -->
 
+
+</div><!-- .site-branding -->

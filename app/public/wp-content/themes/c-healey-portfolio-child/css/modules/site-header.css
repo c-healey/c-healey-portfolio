@@ -1,13 +1,14 @@
 .site-header {
+	padding:0;
 	&__btn-container {  /* get in touch or contact */
 			background-color: transarent;
 			border-radius: 4px;
 			margin: 0 0 10px 20px;	
 			a {
-				color: #fff;
+				color: $color__top-nav-txt;
 			}
 			a:hover{
-				color:grey;
+				color: $color__top-nav-txt-hover;
 				
 			}
 			@mixin atMedium {
@@ -18,7 +19,7 @@
 		}
 
 	
-	&__menu-icon { /* Hamberger menu for small screens*/
+	&__menu-icon { /* Hamburger menu for small screens*/
 		width: 20px;
 		height: 19px;
 	
@@ -33,7 +34,7 @@
 			left:0;
 			width: 20px;
 			height: 3px;
-			background-color: #FFF;
+			background-color: $color__top-nav-txt;
 			transform-origin: 0 0;
 			transition: transform .3s ease-out;
 		}
@@ -43,7 +44,7 @@
 			left:0;
 			width: 20px;
 			height: 3px;
-			background-color: #FFF;
+			background-color: $color__top-nav-txt;
 			transition: all .3s ease-out;
 			transform-origin: 0 50%;
 		}
@@ -54,7 +55,7 @@
 			left:0;
 			width: 20px;
 			height: 3px;
-			background-color: #FFF;
+			background-color: $color__top-nav-txt;
 			transform-origin: 0 100%;
 			transition: transform .3s ease-out;
 		}
@@ -104,13 +105,14 @@
 			transform: scale(1);
 		}
 	}
-}
-
-/* no dark tinting on the featured image */
-.site-header.featured-image:after {
+	/* no dark tinting on the featured image */
+	&.featured-image:after {
      background: none; 
     
+	}
 }
+
+
 
 
 
