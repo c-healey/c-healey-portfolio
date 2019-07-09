@@ -9,7 +9,9 @@
 	right: 0;
 	opacity: 0;
 	visibility: hidden;
-	transform: scale(1.2);
+	
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
 	transition: all .3s ease-out;
 
 	&--is-visible {
@@ -33,18 +35,11 @@
 	}
 	&--contact { 
 		text-align:center;
+		color:$territoryBlue;
 
 		
 
-		&__btn {  
-			font-size: .8rem;
-			width:33%;
 		
-		}
-
-		&__cell {
-			
-		}
 	}
 
 	
@@ -55,7 +50,7 @@
 		font-size: 2rem;
 		transform: scaleX(1.2);
 		transform-origin: 100% 0;
-		color:$color__top-nav;
+		color:$territoryBlue;
 		cursor: pointer;
 
 		&:hover {

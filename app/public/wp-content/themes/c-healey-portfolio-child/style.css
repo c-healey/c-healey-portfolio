@@ -415,22 +415,6 @@ p, ul, ol {
 p, li {
   line-height: 1.65;
 }
-.services::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -85px; 
-  height: 85px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
-.work::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -85px; 
-  height: 85px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
 .about::before { 
   display: block; 
   content: " "; 
@@ -460,116 +444,171 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 /* Borders */
 /* buttons */
 /* Transition timeouts */
-.site-header {
-	padding:0;
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
 }
-.site-header__btn-container {  /* get in touch or contact */
-			background-color: transarent;
-			border-radius: 4px;
-			margin: 0 0 10px 20px;
-		}
-.site-header__btn-container a {
-				color: #575757;
-			}
-.site-header__btn-container a:hover{
-				color: #cc842f;
-				
-			}
-@media (min-width: 960px) {
-.site-header__btn-container {
-				margin: 0 0 10px 20px;	
-				float: right
-		}
+.container--narrow {
+  max-width: 960px;
+}
+.section-break {
+  border: none;
+  border-top: 1px solid #DDD;
+  margin: 2.5rem 0;
+}
+.min-list {
+  padding: 0;
+  margin: 0;
+}
+.min-list li {
+  list-style: none;
+}
+.p-top-small {padding-top: 1rem}
+.p-top-large {padding-top: 1.6rem}
+.p-bottom-large {padding-bottom: 1.6rem}
+@media (min-width: 530px) {
+  .p-top-large {padding-top: 3.5rem}
+  .p-bottom-large {padding-bottom: 3.5rem}
   }
-.site-header__menu-icon { /* Hamburger menu for small screens*/
-		width: 20px;
-		height: 19px;
-	
-		position: absolute;
-		z-index: 10;
-		top: 10px;
-		right: 40px;
-
-	}
-.site-header__menu-icon::before {
-			content:"";
-			position: absolute;
-			top:0;
-			left:0;
-			width: 20px;
-			height: 3px;
-			background-color: #575757;
-			transform-origin: 0 0;
-			transition: transform .3s ease-out;
-		}
-.site-header__menu-icon__middle {
-			position: absolute;
-			top:8px;
-			left:0;
-			width: 20px;
-			height: 3px;
-			background-color: #575757;
-			transition: all .3s ease-out;
-			transform-origin: 0 50%;
-		}
-.site-header__menu-icon::after {
-			content:"";
-			position: absolute;
-			bottom:0;
-			left:0;
-			width: 20px;
-			height: 3px;
-			background-color: #575757;
-			transform-origin: 0 100%;
-			transition: transform .3s ease-out;
-		}
-@media (min-width: 960px) {
-.site-header__menu-icon {
-			display:none
-
-	}
+.no-margin {margin: 0}
+.nu {text-decoration: none}
+.nu:hover {text-decoration: underline}
+.t-left {text-align: left}
+.t-right {text-align: right}
+.t-center {text-align: center}
+.t-small {font-size: .85rem}
+.float-left {float: left}
+.float-right {float: right}
+.push-right {margin-right: 20px}
+.push-left {margin-left:20px;}
+.container:before,
+.container:after,
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.container:after,
+.group:after {
+  clear: both;
+}
+.hide {
+  display: none;
+}
+.site-header {
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+}
+.site-header__avatar {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
-.site-header__menu-icon--close-x::before {
-			transform: rotate(45deg) scaleX(1.25);
-		}
-.site-header__menu-icon--close-x .site-header__menu-icon__middle {
-			opacity:0;
-			transform: scaleX(0);
-		}
-.site-header__menu-icon--close-x::after {
-			transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-
-		}
-.site-header__menu-content {
-		opacity: 0;
-		transform: scale(1.2);
-		transition: all .3s ease-out;
-		position:relative;
-		z-index: -10;
-		padding-top: 0px;
-		text-align: center;
-	}
-@media (min-width: 960px) {
-.site-header__menu-content {
-			opacity : 1;
-			z-index: 1;
-			padding-top: 0;
-			transform: scale(1)
-	}
+.site-header__avatar img {
+    display: block;
+    width: 30px;
+    height: 30px;
   }
-.site-header__menu-content--is-visible {
-			opacity: 1;
-			z-index: 1;
-			transform: scale(1);
-		}
-/* no dark tinting on the featured image */
-.site-header.featured-image:after {
-     background: none; 
-    
-	}
+.site-header__menu {
+    visibility: hidden;
+    position: absolute;
+    background-color: rgba(46, 81, 107, 0.89);
+    left: 0;
+    right: 0;
+    top: -20px;
+    padding-top: 58px;
+    opacity: 0;
+    transform: translateY(-20%);
+    transition: opacity .3s ease-out, visibility .3s ease-out, transform .3s ease-out;
+    padding-bottom: 20px;
+  }
+.site-header__menu--active {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+@media (min-width: 960px) {
+.site-header__menu {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      position: static;
+      background-color: transparent;
+      float: right;
+      padding-top: 0;
+      padding-bottom: 0;
+      top: 0
+  }
+  }
+.site-header__search-trigger {
+    cursor: pointer;
+    color: #FFF;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 6px;
+    right: 16px;
+  }
+@media (min-width: 530px) {
+.site-header__search-trigger {
+      top: 4px;
+      font-size: 1.4rem
+  }
+  }
+@media (min-width: 960px) {
+.site-header__search-trigger {
+      display: none
+  }
+  }
+.site-header__menu-trigger {
+    color: #000;
+    cursor: pointer;
+    font-size: 1.2rem;
+    position: absolute;
+    z-index: 10;
+    top: 7px;
+    right: 46px;
+  }
+@media (min-width: 530px) {
+.site-header__menu-trigger {
+      top: 5px;
+      font-size: 1.4rem
+  }
+  }
+@media (min-width: 960px) {
+.site-header__menu-trigger {
+      display: none
+  }
+  }
+.site-header__util {
+    padding: 0 0 0 20px;
+  }
+@media (min-width: 960px) {
+.site-header__util {
+      padding: 0;
+      float: right
+  }
+  }
+.site-header__btn {
+    margin-right: 20px;
+  }
+@media (min-width: 960px) {
+.site-header__btn {
+      float: left
+  }
+  }
+.site-header .btn--with-photo {
+    margin-right: 0;
+  }
 .site-branding {
 
-	
+	background-color: transparent;
+	background: linear-gradient(rgba(245,245,245, 1), rgba(245,245,245, 0));
 	position: fixed;
 	top:0px;
 	left:0;
@@ -578,24 +617,106 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 	padding-left: 20px;
 	z-index: 10;
 	transition: all .5s ease-in-out;
+
 	
 }
 @media (min-width: 960px) {
 .site-branding {
 		padding-left: 158px
+
 	
 }
   }
+.site-branding__btn-container {  /* get in touch or contact */
+			background-color: transparent;
+			border-radius: 4px;
+			margin: 0 0 10px 20px;
+		}
+.site-branding__btn-container a {
+				color: #575757;
+				font-family: 'Roboto', sans serif;
+    			font-weight: 500;
+			}
+.site-branding__btn-container a:hover{
+				color: #cc842f;
+				
+			}
+@media (min-width: 960px) {
+.site-branding__btn-container {
+				margin: 0 0 10px 20px;	
+				float: right
+		}
+  }
 .site-branding--dark {
-		background-color: rgba(245,245,245, .85);
-		top:0;
-		left: 0;
+		background: linear-gradient(rgba(245,245,245, 1), rgba(245,245,245, 1));
 		
+		
+	
 		
 	}
+.site-description {
+    display: block;
+    text-indent: -9999px;
+    height:0;
+}
+.site-title {
+	position: relative;
+	z-index: 20;
+	margin: 0;
+	font-size: 1.75rem;
+	font-weight: 100;   
+
+}
+.site-title strong {
+  		font-weight: 400;
+	}
+.site-title a {
+		color: #575757;
+  		text-decoration: none;
+	}
+.site-title a:link, .site-title a:visited {
+		color: #575757;
+		font-weight:700;
+    	
+	}
+.site-title a:hover {
+		color: #cc842f;
+
+	}
+.school-logo-text {
+  position: relative;
+  z-index: 20;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+.school-logo-text strong {
+  font-weight: 400;
+}
+.school-logo-text a {
+  color: #FFF;
+  text-decoration: none;
+}
+.school-logo-text--alt-color a {
+  color: #666;
+}
+.school-logo-text--alt-color a:hover {
+    color: #2f5572;
+    text-decoration: underline;
+  }
 .site-header.featured-image .site-branding {
     position: fixed;
     z-index: 10;
+}
+/* psuedo code to push anchor links below the navigation*/
+.page-section:before {
+	display: block; 
+	content: " "; 
+	margin-top: -85px; 
+	height: 85px; 
+	visibility: hidden; 
+	pointer-events: none;
+
 }
 .social-icons {
 	text-align:center;
@@ -674,79 +795,14 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 		padding-right: 0px;
 		
 	}
-.reveal-item {
-	opacity: 0;
-	transition: all 1.5s ease-out;
-	transform:  scale(1.15);
-}
-.reveal-item--is-visible {
-		opacity: 1;
-		transform:  scale(1);
-	}
-.modal {
-	position: fixed;
-	z-index: 20;
-	background-color: rgba(255,255,255, .94);
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	opacity: 0;
-	visibility: hidden;
-	transform: scale(1.2);
-	transition: all .3s ease-out;
-
-}
-.modal--is-visible {
-		opacity: 1;
-		visibility: visible;
-		transform: scale(1);
-	}
-.modal__inner {
-		position: absolute;
-		width: 100%;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-.modal__description{
-		text-align: center;
-		font-size: 1.3rem;
-		font-weight: 300;
-		line-height: 1.65;
-	}
-.modal--contact { 
-		text-align:center;
-	}
-.modal--contact__btn {  
-			font-size: .8rem;
-			width:33%;
-		
-		}
-.modal--contact__cell {
-			
-		}
-.modal__close {
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		font-size: 2rem;
-		transform: scaleX(1.2);
-		transform-origin: 100% 0;
-		color:#f5f5f5;
-		cursor: pointer;
-
-	}
-.modal__close:hover {
-			color: #cc842f;
-		}
 .hero-slider {
   position: relative;
-  margin-top:125px;
+  margin-top:58px;
 
 }
 @media (min-width: 960px) {
 .hero-slider {
-    margin-top:100px
+    margin-top:58px
 
 }
   }
@@ -759,8 +815,8 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
   }
 @media (min-width: 960px) {
 .hero-slider__interior {
-      padding-top: 130px;
-      padding-bottom: 100px
+      padding-top: 330px;
+      padding-bottom: 300px
   }
   }
 .hero-slider__slide {
@@ -773,20 +829,15 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
     border-radius: 4%;
     margin: 0 20px 0 auto;
     width: 30%;
-    background-color: rgba(204,132,47, .68);
+    background-color: rgba(204,132,47, .88);
     padding: 10px;
     color: #FFF;
   }
 @media (min-width: 960px) {
 .hero-slider__overlay {
-      width: 25%;
-      
+      width: 25%; 
       margin: 0 20px 0 auto
   }
-  }
-.hero-slider .btn {
-    font-size: .8rem;
-    width:90%;
   }
 .hero-slider .headline {
     font-size: 1rem;
@@ -869,74 +920,6 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 			display: inline-block
 	}
   }
-/* Do not edit modules/_sprite directly as it is generated automatically by gulp
-Instead edit gulp/templates/sprite */
-.icon {
-		background-image: url('./images/sprites/sprite-e79e95cc.svg');
-	}
-.no-svg .icon {
-		background-image: url('./images/sprites/sprite-e79e95cc.png');
-	}
-.icon--clear-view-escapes {  
-width: 144.4px;
-height: 61.53px;
-background-position: 0 0;
-}
-.icon--comment {  
-width: 66px;
-height: 66px;
-background-position: 99.71014492753623% 0;
-}
-.icon--facebook {  
-width: 23.23px;
-height: 44.01px;
-background-position: 26.424310365536293% 45.92133741323979%;
-}
-.icon--fire {  
-width: 58px;
-height: 66px;
-background-position: 0 99.58035714285714%;
-}
-.icon--globe {  
-width: 66px;
-height: 66px;
-background-position: 28.019323671497585% 99.58035714285714%;
-}
-.icon--instagram {  
-width: 44.01px;
-height: 44.01px;
-background-position: 63.059522249879905% 49.25740726919919%;
-}
-.icon--mail {  
-width: 66px;
-height: 50px;
-background-position: 0 48.0703125%;
-}
-.icon--rain {  
-width: 66px;
-height: 66px;
-background-position: 99.71014492753623% 58.92857142857143%;
-}
-.icon--star {  
-width: 66px;
-height: 66px;
-background-position: 59.90338164251208% 99.58035714285714%;
-}
-.icon--twitter {  
-width: 53.78px;
-height: 44.06px;
-background-position: 94.15199343125627% 98.55159026429745%;
-}
-.icon--wifi {  
-width: 62px;
-height: 66px;
-background-position: 68.43601895734596% 0;
-}
-.icon--youtube {  
-width: 36.75px;
-height: 44px;
-background-position: 37.76931216931217% 45.917910447761194%;
-}
 /* My contacts */
 .edit-contact,
 .delete-contact,
@@ -1084,15 +1067,7 @@ background-position: 37.76931216931217% 45.917910447761194%;
   padding: 12px 24px;
   border: none;
   outline: none;
-   background-color: #cc842f;
 }
-.btn:hover {
-    background: linear-gradient(#cc842f, rgb(199, 106, 0));
-    color: #2f405e;
-  }
-.btn:visited {
-    color:#FFF;
-  }
 .btn--small {
     font-size: .88rem;
     padding: 7px 13px;
@@ -1101,6 +1076,60 @@ background-position: 37.76931216931217% 45.917910447761194%;
 .btn--with-photo {
     padding-left: 40px;
     position: relative;
+  }
+.btn--orange {
+    background-color: #EE964B;
+  }
+.btn--orange:hover {
+    background: linear-gradient(#EE964B, rgb(235, 109, 0));
+  }
+.btn--dark-orange {
+    background-color: #F95738;
+  }
+.btn--dark-orange:hover {
+    background: linear-gradient(#F95738, rgb(204, 34, 0));
+  }
+.btn--nav {
+    background-color: #cc842f;
+    
+  }
+.btn--nav a:visited { color:white; }
+.btn--nav:visited{
+    color:white;
+  }
+.btn--nav:hover {
+    background: linear-gradient(rgb(255, 157, 46), #cc842f);
+    color: #404E66;
+  }
+.btn--blue {
+    background-color: #2f5572;
+  }
+.btn--blue:hover {
+    background: linear-gradient(rgb(46, 108, 156), #2f5572);
+  }
+.btn--yellow {
+    background-color: #F4D35E;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
+  }
+.btn--yellow:hover {
+    background: linear-gradient(#F4D35E, rgb(240, 188, 0));
+  }
+.btn--beige {
+    background-color: #FAF0CA;
+    color: #173f58;
+  }
+.btn--beige:hover {
+    background-color: #F4D35E;
+  }
+.btn--gray {
+    background-color: #222;
+  }
+.btn--white {
+    background-color: #FFF;
+    color: #173f58;
+  }
+.btn--white:hover {
+    background-color: #DDD;
   }
 .btn--large {
     font-size: 1.3rem;
@@ -1117,47 +1146,111 @@ background-position: 37.76931216931217% 45.917910447761194%;
     cursor: default;
     color: #333;
   }
-body.login .button-primary {
-  background-color: #F95738;
-  border-color: rgb(224, 84, 56);
-  text-shadow: 0 -1px 1px rgb(212, 82, 56),1px 0 1px rgb(212, 82, 56),0 1px 1px rgb(212, 82, 56),-1px 0 1px rgb(212, 82, 56);
-  box-shadow: 0 1px 0 rgb(199, 80, 56);
+.front-page h1 {
+		display:none;
+	}
+.button, .search-submit {
+	background-color: #cc842f;
+	background-color: green;
+
+
 }
-body.login .button-primary:hover,
-body.login .button-primary:active,
-body.login .button-primary:focus {
-  background-color: rgb(232, 85, 56);
-  border-color: rgb(212, 82, 56);
-  text-shadow: 0 -1px 1px rgb(199, 80, 56),1px 0 1px rgb(199, 80, 56),0 1px 1px rgb(199, 80, 56),-1px 0 1px rgb(199, 80, 56);
-  box-shadow: 0 1px 0 rgb(186, 78, 56);
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+
+	
+	background: #cc842f;
+
+	color: #fff;
 }
-body.login {
-  background-color: #e0e6ef;
-}
-.login h1 a {
-  color: #2f5572;
-  font-size: 30px;
-  font-weight: 300;
-  background-image: none;
-  width: auto;
-  height: auto;
-  text-indent: 0;
-}
-/*all but home page */
+.button:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+		background: #404E66;
+		
+	}
+.button:visited, button:visited, input[type="button"]:visited, input[type="reset"]:visited, input[type="submit"]:visited {
+		color: #fff;
+	}
+.button:focus, button:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus {
+		background: #404E66;
+	}
 .main-navigation {
-	float: left;
- 
+  padding-top: 2px;
 }
+.main-navigation ul {
+    padding: 0;
+    margin: 0;
+  }
+.main-navigation ul:before,
+  .main-navigation ul:after {
+    content: " ";
+    display: table;
+  }
+.main-navigation ul:after {
+    clear: both;
+  }
+@media (min-width: 960px) {
+.main-navigation {
+    float: left;
+    margin-right: 20px
+}
+  }
+.main-navigation .main-menu {
+
+        display: block;
+      
+
+    }
+@media (min-width: 960px) {
+.main-navigation .main-menu {
+          display: inline-block
+      
+
+    }
+  }
 .main-navigation .main-menu > li {
             color: #575757;
         }
 .main-navigation .main-menu > li > a {
+                font-family: 'Roboto', sans serif;
+                font-weight: 300;
+                color: white;
+            }
+@media (min-width: 960px) {
+.main-navigation .main-menu > li > a {
                 color: #575757;
+                padding:10px 0
             }
-.main-navigation .main-menu > li > a:hover {
+  }
+.main-navigation .main-menu > li a:hover {
                 color: #cc842f;
+                
             }
+.main-navigation li {
+  list-style: none;
+}
+@media (min-width: 960px) {
+.main-navigation li {
+    float: left;
+    padding-left: 20px
+}
+  }
+.main-navigation a {
+  display: block;
+  padding: 10px 20px;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 300;
+ 
+}
 /* @import 'modules/_site-header-featured-image'; 
+@import 'modules/_sprite';
+@import "modules/_modal";
+@import "modules/_reveal-item";
+@import 'modules/_login';
+
 
 @import "modules/blog-roll";
 */

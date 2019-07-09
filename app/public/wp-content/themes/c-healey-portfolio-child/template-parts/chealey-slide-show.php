@@ -13,7 +13,7 @@
         <div class="hero-slider__overlay">
           <h2 class="headline"><?php the_title(); ?></h2>
           
-          <p class="t-center no-margin"><a href="<?php the_field("ch_slideshow"); ?>" class="btn ">Learn More</a></p>
+          <p class="t-center "><a href="<?php the_field("ch_slideshow"); ?>" class="btn btn--small btn--nav">Learn More</a></p>
         </div>
       </div>
     </div>

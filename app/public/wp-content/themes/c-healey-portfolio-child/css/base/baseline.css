@@ -55,22 +55,8 @@ p, ul, ol {
 p, li {
   line-height: 1.65;
 }
-.services::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -85px; 
-  height: 85px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
-.work::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -85px; 
-  height: 85px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
+
+
 .about::before { 
   display: block; 
   content: " "; 

@@ -1,6 +1,7 @@
 .site-branding {
 
-	
+	background-color: transparent;
+	background: linear-gradient(rgba($color__top-nav, 1), rgba($color__top-nav, 0));
 	position: fixed;
 	top:0px;
 	left:0;
@@ -10,22 +11,108 @@
 	z-index: 10;
 	transition: all .5s ease-in-out;
 
+
+
 	@mixin atMedium {
 		padding-left: 158px;	
 	}
 		
+	&__btn-container {  /* get in touch or contact */
+			background-color: transparent;
+			border-radius: 4px;
+			margin: 0 0 10px 20px;	
+			a {
+				color: $color__top-nav-txt;
+				font-family: 'Roboto', sans serif;
+    			font-weight: 500;
+			}
+			a:hover{
+				color: $color__top-nav-txt-hover;
+				
+			}
+			@mixin atMedium {
+				margin: 0 0 10px 20px;	
+				float: right;	
+
+			}
+		}	
 
 	&--dark {
-		background-color: rgba($color__top-nav, .85);
-		top:0;
-		left: 0;
+		background: linear-gradient(rgba($color__top-nav, 1), rgba($color__top-nav, 1));
 		
+		
+	
 		
 	}
+
 	
+}
+.site-description {
+    display: block;
+    text-indent: -9999px;
+    height:0;
+}
+.site-title {
+	position: relative;
+	z-index: 20;
+	margin: 0;
+	font-size: 1.75rem;
+	font-weight: 100;
+	strong {
+  		font-weight: 400;
+	}
+	a {
+		color: $color__top-nav-txt;
+  		text-decoration: none;
+	}
+	a:link, a:visited {
+		color: $color__top-nav-txt;
+		font-weight:700;
+    	
+	}
+	a:hover {
+		color: $color__top-nav-txt-hover;
+
+	}   
+
+}
+.school-logo-text {
+  position: relative;
+  z-index: 20;
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 100;
+}
+
+.school-logo-text strong {
+  font-weight: 400;
+}
+
+.school-logo-text a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.school-logo-text--alt-color a {
+  color: #666;
+
+  &:hover {
+    color: $mainBlue;
+    text-decoration: underline;
+  }
 }
 
 .site-header.featured-image .site-branding {
     position: fixed;
     z-index: 10;
+}
+/* psuedo code to push anchor links below the navigation*/
+.page-section:before {
+	display: block; 
+	content: " "; 
+	margin-top: -85px; 
+	height: 85px; 
+	visibility: hidden; 
+	pointer-events: none;
+
 }

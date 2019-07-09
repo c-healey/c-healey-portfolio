@@ -10,13 +10,17 @@
             color: $color__top-nav-txt;
             > a {
                 color: $color__top-nav-txt;
+                font-family: 'Roboto', sans serif;
+                font-weight: 500;
             }
-            > a:hover {
+             a:hover {
                 color: $color__top-nav-txt-hover;
+                
             }
         }
 
     }
+
  
 }
  

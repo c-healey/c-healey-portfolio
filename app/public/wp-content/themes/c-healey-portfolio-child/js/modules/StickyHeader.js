@@ -5,10 +5,10 @@ import smoothScroll from 'jquery-smooth-scroll';
 class StickyHeader {
 	constructor () {
 		this.lazyImages = $(".lazyload");
-		this.siteHeader = $(".site-branding");
-		this.headerTriggerElement = $(".entry-title");
+		this.siteHeader = $(".sticky-header");
+		this.headerTriggerElement = $(".sticky-header-trigger");
 		this.createHeaderWaypoint();
-		this.pageSections = $(".site-content");
+		this.pageSections = $(".page-section");
 		this.headerLinks = $(".main-navigation a");
 		this.createPageSectionWaypoints();
 		this.addSmoothScrolling();
@@ -37,7 +37,7 @@ class StickyHeader {
 					that.siteHeader.removeClass ("site-branding--dark");
 				}
 			},
-			offset: "10%"
+			offset: "-5%"
 		});
 	}
 
@@ -55,7 +55,7 @@ class StickyHeader {
 						$(matchingHeaderLink).addClass("is-current-link");
 					}					
 				},
-				offset: "18%"
+				offset: "90%"
 			});
 
 			new Waypoint({

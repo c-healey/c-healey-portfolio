@@ -6,16 +6,16 @@ import 'picturefill';
 
 // Our modules / classes
 import MobileMenu from './modules/MobileMenu';
-//import RevealOnScroll from './modules/RevealOnScroll';
 import StickyHeader from './modules/StickyHeader';
-import Modal from './modules/Modal';
 import ChealeySlideshow from './modules/ChealeySlideshow';
-import Contact from './modules/Contact';
+//import RevealOnScroll from './modules/RevealOnScroll';
+//import Contact from './modules/Contact';
+//import Modal from './modules/Modal';
 
 var mobileMenu = new MobileMenu();
+var stickyHeader = new StickyHeader();
+var chealeySlideshow = new ChealeySlideshow();
 //new RevealOnScroll($(".feature-item"), "85%");
 //new RevealOnScroll($(".testimonial"), "60%");
-var stickyHeader = new StickyHeader();
-var modal = new Modal();
-var chealeySlideshow = new ChealeySlideshow();
-var contact = new Contact();
+//var modal = new Modal();
+//var contact = new Contact();

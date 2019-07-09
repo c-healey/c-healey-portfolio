@@ -12,23 +12,25 @@ Text Domain: c-healey-portfolio-child
 /* SASS and Global'ish Stuff */
 @import "base/baseline";
 @import "base/_variables";
-
-@import "modules/site-header"; 
+@import "base/_utility-classes";
+@import "modules/_site-header"; 
 @import "modules/_site-branding";
 @import "modules/_social-icons";
 @import "modules/_wrapper"; 
-@import "modules/_reveal-item";
-
-@import "modules/_modal";
 @import "modules/hero-slider";
 @import 'modules/_content-area';
 @import 'modules/_section-title';
-@import 'modules/_sprite';
 @import "modules/_contact";
 @import 'modules/_btn';
-@import 'modules/_login';
-@import "modules/main-menu";
+
+@import "modules/_front-page";
+@import "modules/_main-navigation";
 /* @import 'modules/_site-header-featured-image'; 
+@import 'modules/_sprite';
+@import "modules/_modal";
+@import "modules/_reveal-item";
+@import 'modules/_login';
+
 
 @import "modules/blog-roll";
 */

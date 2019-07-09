@@ -37,28 +37,30 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 
 $territoryOrange: #cc842f; /* top nav my account, sign in, logo, slideshow overlay backgrounds, right colume feature background */
 $territoryBlue: #404E66; /* left colume feature background */
+$territoryWhite: #f5f5f5;
 $territoryTitle: #fbf6f0;
 $territoryEmailBgrnd: #6e7b8e;
 $territoryEmailBtnTxt:#2d2d2d;
 $territoryEmailBtnBgrnd: #adadad;
 $territoryEmailInputBgrnd: #4c4c4c;
 $territoryEmailTxt: #4c4c4c;
-$topNavBgrnd: #f5f5f5;
+$topNavBgrnd: $territoryBlue;
 $topNavAnchorTxt: #575757;
 
 /* Navigation*/
-$color__top-nav: $topNavBgrnd;
+$color__top-nav: $territoryWhite;
 $color__top-nav-txt: $topNavAnchorTxt;
 $color__top-nav-txt-hover: $territoryOrange;
 
 /* Backgrounds */
 $color__background-button: $territoryOrange;
+$color__background-nav-button: $territoryOrange;
 $color__background-body: #fff;
 $color__background-input: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 
-$color__background-button-hover: #111;
+$color__background-button-hover: $territoryBlue;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__background_selection: mix( $color__background-body, $color__background-button, 75% ); /* lighten( salmon, 22.5% ); // lighten( #0999d4, 48% ); ^/
@@ -74,7 +76,7 @@ $color__text-input-focus: #111;
 
 /* Links */
 $color__link: #0073aa;
-$color__link-visited: $color__top-nav;
+$color__link-visited: $territoryBlue;
 $color__link-hover: darken( $color__link, 10% );
 
 /* Borders */

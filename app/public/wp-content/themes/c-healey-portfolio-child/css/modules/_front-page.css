@@ -1,0 +1,38 @@
+.front-page {
+
+	h1 {
+		display:none;
+	}
+}
+.button, .search-submit {
+	background-color: $color__background-button;
+	background-color: green;
+
+
+}
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+
+	
+	background: $color__background-button;
+
+	color: $color__background-body;
+	
+
+	&:hover {
+		background: $color__background-button-hover;
+		
+	}
+
+	&:visited {
+		color: $color__background-body;
+	}
+
+	&:focus {
+		background: $color__background-button-hover;
+	}
+}
