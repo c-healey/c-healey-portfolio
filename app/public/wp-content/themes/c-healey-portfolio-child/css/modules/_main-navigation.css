@@ -1,5 +1,30 @@
+
 .main-navigation {
 
+/* Navigation */
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+  transition: color 110ms ease-in-out;
+  color: $color__link;
+}
+
+a:visited {
+  color: $color__link;
+}
+
+a:hover,
+a:active {
+  color: $color__link;
+  outline: 0;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: thin dotted;
+  text-decoration: underline;
+}
 
    .main-menu {
 
@@ -14,27 +39,67 @@
               padding:10px 0;
             }
           }
-           a:hover {
-              color: $color__top-nav-txt-hover;
-              
-          }
+          
       }
 
     }
-    .sub-menu {
-      background-color: $color__top-nav-txt;
-      a:visited{
-        background-color: $color__top-nav-txt-hover;
-      }
-    }
+   
 }
 
 
-
-
-
  
+/** === Main menu === */
 
-   
+.main-navigation {
 
- 
+
+  .main-menu {
+
+
+    > li {
+      color: $color__link;
+      > a {
+
+        font-weight: 700;
+        color: $color__link;
+        &:hover,
+        &:hover + svg {
+          color: $color__link-hover;
+        }
+      }
+     
+    }
+  }
+
+  .sub-menu {
+
+    background-color: $color__link;
+    color: $color__background-body;
+
+    > li {
+
+      > a,
+      > .menu-item-link-return {
+
+        color: $color__background-body;
+
+        &:hover,
+        &:focus {
+          background: $color__link-hover;
+
+          &:after {
+            background: $color__link-hover;
+          }
+          &:visited {
+            background-color: $color__link;
+          }
+        }
+      }
+
+     
+    }
+  }
+
+ }
+
+  

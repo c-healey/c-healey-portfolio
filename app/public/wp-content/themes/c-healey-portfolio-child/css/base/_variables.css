@@ -5,7 +5,7 @@ $darkOrange: #F95738;
 $lightOrange: #EE964B;
 $beige: #FAF0CA;
 $mainYellow: #F4D35E;
-$grey: #e0e6ef;			/* background */
+$lightGrey: #e0e6ef;			/* background */
 $paleOrange: #fabb69; /* current link nav */
 $charcoal: #333;
 
@@ -45,12 +45,12 @@ $territoryEmailBtnBgrnd: #adadad;
 $territoryEmailInputBgrnd: #4c4c4c;
 $territoryEmailTxt: #4c4c4c;
 $topNavBgrnd: $territoryBlue;
-$topNavAnchorTxt: #575757;
+$darkGrey: #575757; /* grey */
 
 /* Navigation*/
 $color__top-nav: $territoryWhite;
-$color__top-nav-txt: $topNavAnchorTxt;
-$color__top-nav-txt-hover: $territoryOrange;
+$color__top-nav-txt: $darkGrey;
+$color__top-nav-background-hover: red;
 
 /* Backgrounds */
 $color__background-button: $territoryOrange;
@@ -75,8 +75,8 @@ $color__text-input-focus: #111;
 
 
 /* Links */
-$color__link: #0073aa;
-$color__link-visited: $territoryBlue;
+$color__link: $darkGrey;
+$color__link-visited: black;
 $color__link-hover: darken( $color__link, 10% );
 
 /* Borders */

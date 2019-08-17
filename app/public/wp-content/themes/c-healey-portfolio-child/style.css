@@ -435,6 +435,7 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 */
 /* top nav my account, sign in, logo, slideshow overlay backgrounds, right colume feature background */
 /* left colume feature background */
+/* grey */
 /* Navigation*/
 /* Backgrounds */
 /* lighten( salmon, 22.5% ); // lighten( #0999d4, 48% ); ^/
@@ -681,17 +682,30 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
     cursor: default;
     color: #333;
   }
-/*
-@import "modules/_contact";
-@import "modules/_social-icons";
- 
-@import "modules/hero-slider";
-@import "modules/_site-header"; 
-@import "modules/_site-branding";
-@import "modules/_front-page";
-*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+.main-navigation a {
+  transition: color 110ms ease-in-out;
+  color: #575757;
+}
+/* Navigation */
+.main-navigation a:visited {
+  color: #575757;
+}
+.main-navigation a:hover,
+.main-navigation a:active {
+  color: #575757;
+  outline: 0;
+  text-decoration: none;
+}
+.main-navigation a:focus {
+  outline: thin dotted;
+  text-decoration: underline;
+}
 .main-navigation .main-menu > li {
           color: #575757;
+          
       }
 .main-navigation .main-menu > li > a {
               font-family: 'Roboto', sans serif;
@@ -704,16 +718,42 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
               padding:10px 0
           }
   }
-.main-navigation .main-menu > li a:hover {
-              color: #cc842f;
-              
-          }
-.main-navigation .sub-menu {
-      background-color: #575757;
+/** === Main menu === */
+.main-navigation .main-menu > li {
+      color: #575757;
+     
     }
-.main-navigation .sub-menu a:visited{
-        background-color: #cc842f;
+.main-navigation .main-menu > li > a {
+
+        font-weight: 700;
+        color: #575757;
       }
+.main-navigation .main-menu > li > a:hover,
+        .main-navigation .main-menu > li > a:hover + svg {
+          color: darken( #575757, 10% );
+        }
+.main-navigation .sub-menu {
+
+    background-color: #575757;
+    color: #fff;
+  }
+.main-navigation .sub-menu > li > a,
+      .main-navigation .sub-menu > li > .menu-item-link-return {
+
+        color: #fff;
+      }
+.main-navigation .sub-menu > li > a:hover,
+        .main-navigation .sub-menu > li > a:focus,
+        .main-navigation .sub-menu > li > .menu-item-link-return:hover,
+        .main-navigation .sub-menu > li > .menu-item-link-return:focus {
+          background: darken( #575757, 10% );
+        }
+.main-navigation .sub-menu > li > a:hover:after, .main-navigation .sub-menu > li > a:focus:after, .main-navigation .sub-menu > li > .menu-item-link-return:hover:after, .main-navigation .sub-menu > li > .menu-item-link-return:focus:after {
+            background: darken( #575757, 10% );
+          }
+.main-navigation .sub-menu > li > a:hover:visited, .main-navigation .sub-menu > li > a:focus:visited, .main-navigation .sub-menu > li > .menu-item-link-return:hover:visited, .main-navigation .sub-menu > li > .menu-item-link-return:focus:visited {
+            background-color: #575757;
+          }
 .pad-sides-20 {
 	padding: 0 20px;
 }
@@ -801,7 +841,15 @@ div.wpcf7 input[type="text"],
 	border: solid #404E66;
 	border-radius: 4px;
 }
-/* @import 'modules/_site-header-featured-image'; 
+/*
+@import "modules/_contact";
+@import "modules/_social-icons";
+ 
+@import "modules/hero-slider";
+@import "modules/_site-header"; 
+@import "modules/_site-branding";
+@import "modules/_front-page";
+@import 'modules/_site-header-featured-image'; 
 @import 'modules/_sprite';
 @import "modules/_modal";
 @import "modules/_reveal-item";
