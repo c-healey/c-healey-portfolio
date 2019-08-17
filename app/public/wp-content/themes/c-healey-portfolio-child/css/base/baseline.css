@@ -20,6 +20,30 @@
     @mixin-content;
   }
 }
+
+@define-mixin atMobile {
+  @media (min-width: $mobile_width) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atTablet {
+  @media (min-width: $tablet_width) {
+    @mixin-content;
+  }
+}
+
+@define-mixin atDesktop {
+  @media (min-width: $desktop_width) {
+    @mixin-content;
+  }
+}
+@define-mixin atWide {
+  @media (min-width: $wide_width) {
+    @mixin-content;
+  }
+}
+
 @define-mixin clearfix {
   &::after {
     content: "";

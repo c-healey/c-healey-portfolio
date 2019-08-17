@@ -1,0 +1,85 @@
+.pad-sides-20 {
+	padding: 0 20px;
+}
+.page-background {
+	background-color: #ebecf3;
+}
+.btn--orange {
+	background-color: $color__background-button;
+	&:hover{
+		background-color:$color__background-button-hover;
+	}
+
+}
+.site-header.featured-image:after {
+    opacity: 0.5;
+    }
+.site-logo .custom-logo-link {
+	border-radius: 0%;
+
+	}
+	.site-header a:hover{
+		
+	 background-color:transparent;
+
+
+	}
+ 
+	.entry .entry-content p.has-background, h4 {
+	    padding: 14px 30px;
+	    background-color: #737c7e;/* grey heading paragraphs */
+	    color: white;
+	    font-weight: 400;
+	    margin: 0rem 0 1rem 0;
+	}
+	
+.header-book-it-container {
+	max-width: 560px;
+	color: white;
+	@mixin atDesktop {  
+		width: 50%;
+	}
+	@mixin atWide {  
+		width: 35%;
+	}
+	
+
+}
+
+div.wpcf7 {
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="url"], 
+	input[type="password"], 
+	input[type="search"], 
+	input[type="number"], 
+	input[type="tel"], input[type="range"], 
+	input[type="date"], input[type="month"], 
+	input[type="week"], input[type="time"], 
+	input[type="datetime"], input[type="datetime-local"], input[type="color"], textarea { 
+		max-width: 100%;
+		
+	}
+}
+.book-it-container, .header-book-it-container {
+	
+	
+	.button, button, input[type="button"], input[type="reset"], input[type="submit"] {
+		background-color: $color__background-button;
+		width:100%;
+		text-align: center;
+		&:hover{
+			background-color:$color__background-button-hover;
+		}
+	}
+
+}
+.wp-block-button__link:hover {
+	background-color:$color__background-button-hover;
+}
+
+.border--blue {
+	border: solid $territoryBlue;
+	border-radius: 4px;
+}

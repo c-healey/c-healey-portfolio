@@ -100,3 +100,10 @@ $link_transition: 110ms;
 $icon_transition: 120ms;
 $button_transition: 150ms;
 $background_transition: 200ms;
+
+/* Responsive widths. */
+
+$mobile_width: 600px;
+$tablet_width: 768px;
+$desktop_width: 1168px;
+$wide_width: 1379px;
