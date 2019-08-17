@@ -2,21 +2,16 @@
 
 
 function site_features(){ 
-//Have to remove parent filters after theme setup, because child theme functions are loaded first
-    //remove_filter( 'wp_nav_menu', 'twentynineteen_add_ellipses_to_nav');
-    remove_filter( 'wp_nav_menu_objects', 'twentynineteen_add_mobile_parent_nav_menu_items'); //removing this fiilter causes errors . still get the annoying ellipses
 
-    //add_theme_support('title-tag'); // already in twentyninteen
-    //add_theme_support('post-thumbnails'); //already intwebtyniinteen
     
     add_image_size('slideshow', 1500, 550, true);
     add_image_size('pageBanner', 1500, 350, true);
 
-    register_nav_menu ('topNav', 'Top Navigation');
+    //register_nav_menu ('topNav', 'Top Navigation');
 }
 add_action( 'after_setup_theme', 'site_features' );
 
-
+/* dequeueing the touch nav allows us to have a smaller submenu  that does not obliterate the page with ine silly subnav item.*/
 function wpdocs_dequeue_script() {
      wp_dequeue_script('twentynineteen-touch-navigation');
 }
