@@ -14,27 +14,7 @@ Text Domain: c-healey-portfolio-child
 @import "base/_variables";
 @import "base/_utility-classes";
 
-@import "modules/_wrapper";
-@import 'modules/_content-area';
-@import 'modules/_section-title';
-@import 'modules/_btn';
+
 @import "modules/_main-navigation";
 @import "modules/_one-page-home";
 
-/*
-@import "modules/_contact";
-@import "modules/_social-icons";
- 
-@import "modules/hero-slider";
-@import "modules/_site-header"; 
-@import "modules/_site-branding";
-@import "modules/_front-page";
-@import 'modules/_site-header-featured-image'; 
-@import 'modules/_sprite';
-@import "modules/_modal";
-@import "modules/_reveal-item";
-@import 'modules/_login';
-
-
-@import "modules/blog-roll";
-*/

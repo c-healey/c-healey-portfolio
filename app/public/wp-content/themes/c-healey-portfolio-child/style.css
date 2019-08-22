@@ -423,23 +423,13 @@ p, li {
   visibility: hidden; 
   pointer-events: none;
 }
-/* background */
-/* current link nav */
-/*  
-Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspiration-hustle/
-*/
-/* 
- Color Pallette 204 https://www.astellescolors.com/2017/06/02/color-inspiration-freshened/
- */
 /*Origiinal Territory   https://www.originalterritory.com/
 */
-/* top nav my account, sign in, logo, slideshow overlay backgrounds, right colume feature background */
+/* button  color */
 /* left colume feature background */
 /* grey */
 /* Navigation*/
 /* Backgrounds */
-/* lighten( salmon, 22.5% ); // lighten( #0999d4, 48% ); ^/
-
 /* Text */
 /* Links */
 /* Borders */
@@ -499,189 +489,6 @@ Color Pallette 253 Hustle https://www.astellescolors.com/2018/01/09/color-inspir
 .hide {
   display: none;
 }
-.wrapper {
-	overflow: hidden;
-	padding-left: 18px;
-	padding-right: 18px;
-	max-width: 1236px;
-	margin-right: auto;
-	margin-left: auto;
-}
-.wrapper--medium {
-		max-width: 976px;
-	}
-.wrapper--narrow {
-		max-width: 470px;
-	}
-.wrapper .wrapper {
-		padding-left: 0;
-		padding-right: 0;
-	}
-.wrapper--b-margin {
-		margin-bottom: 1rem;
-
-	}
-@media (min-width: 530px) {
-.wrapper--b-margin {
-			margin-bottom: 3.875rem
-
-	}
-  }
-.wrapper--no-padding-until-medium {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-@media (min-width: 960px) {
-.wrapper--no-padding-until-medium {
-			padding-left: 18px;
-			padding-right: 18px
-	}
-  }
-.wrapper--no-padding-until-large {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-@media (min-width: 1010px) {
-.wrapper--no-padding-until-large {
-			padding-left: 18px;
-			padding-right: 18px
-	}
-  }
-.wrapper--no-padding {
-		padding-left: 0px;
-		padding-right: 0px;
-		
-	}
-.section-title {
-	font-size: 2.55rem;
-	font-weight: 300;
-	text-align: center;
-	color: #f5f5f5;
-
-}
-@media (min-width: 530px) {
-.section-title {
-		font-size: 3.75rem
-
-}
-  }
-.section-title strong {
-		font-weight: 500;
-	}
-.section-title--blue {
-		color: #2f5572;
-	}
-.section-title--less-margin {
-		margin-top:  0;
-		margin-bottom:1.3rem
-	}
-.section-title__icon {
-		
-		display: block;
-		margin-right: auto;
-		margin-left: auto;
-		margin-bottom: .6rem;
-	}
-@media (min-width: 530px) {
-.section-title__icon {
-			position: relative;
-			top: 8px;
-			margin-right: .5rem;
-			margin-left: 0;
-			margin-bottom: 0;
-			display: inline-block
-	}
-  }
-.btn {
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 4px;
-  overflow: hidden;
-  text-decoration: none;
-  color: #FFF;
-  font-size: 1.19rem;
-  padding: 12px 24px;
-  border: none;
-  outline: none;
-}
-.btn--small {
-    font-size: .88rem;
-    padding: 7px 13px;
-    font-weight: 300;
-  }
-.btn--with-photo {
-    padding-left: 40px;
-    position: relative;
-  }
-.btn--orange {
-    background-color: #EE964B;
-  }
-.btn--orange:hover {
-    background: linear-gradient(#EE964B, rgb(235, 109, 0));
-  }
-.btn--dark-orange {
-    background-color: #F95738;
-  }
-.btn--dark-orange:hover {
-    background: linear-gradient(#F95738, rgb(204, 34, 0));
-  }
-.btn--nav {
-    background-color: #cc842f;
-    
-  }
-.btn--nav a:visited { color:white; }
-.btn--nav:visited{
-    color:white;
-  }
-.btn--nav:hover {
-    background: linear-gradient(rgb(255, 157, 46), #cc842f);
-    color: #404E66;
-  }
-.btn--blue {
-    background-color: #2f5572;
-  }
-.btn--blue:hover {
-    background: linear-gradient(rgb(46, 108, 156), #2f5572);
-  }
-.btn--yellow {
-    background-color: #F4D35E;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .22);
-  }
-.btn--yellow:hover {
-    background: linear-gradient(#F4D35E, rgb(240, 188, 0));
-  }
-.btn--beige {
-    background-color: #FAF0CA;
-    color: #173f58;
-  }
-.btn--beige:hover {
-    background-color: #F4D35E;
-  }
-.btn--gray {
-    background-color: #222;
-  }
-.btn--white {
-    background-color: #FFF;
-    color: #173f58;
-  }
-.btn--white:hover {
-    background-color: #DDD;
-  }
-.btn--large {
-    font-size: 1.3rem;
-    padding: 16px 34px;
-    border-radius: 7px;
-  }
-@media (min-width: 530px) {
-.btn--large {
-      font-size: 1.9rem
-  }
-  }
-.btn--inactive {
-    background-color: transparent;
-    cursor: default;
-    color: #333;
-  }
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
@@ -841,20 +648,4 @@ div.wpcf7 input[type="text"],
 	border: solid #404E66;
 	border-radius: 4px;
 }
-/*
-@import "modules/_contact";
-@import "modules/_social-icons";
- 
-@import "modules/hero-slider";
-@import "modules/_site-header"; 
-@import "modules/_site-branding";
-@import "modules/_front-page";
-@import 'modules/_site-header-featured-image'; 
-@import 'modules/_sprite';
-@import "modules/_modal";
-@import "modules/_reveal-item";
-@import 'modules/_login';
 
-
-@import "modules/blog-roll";
-*/

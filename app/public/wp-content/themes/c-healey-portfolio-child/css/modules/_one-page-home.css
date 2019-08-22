@@ -80,6 +80,6 @@ div.wpcf7 {
 }
 
 .border--blue {
-	border: solid $territoryBlue;
+	border: solid $darkBlue;
 	border-radius: 4px;
 }
