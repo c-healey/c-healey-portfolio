@@ -57,15 +57,15 @@
         justify-content: center;
         align-content: center;
         z-index:100;
-      /*  
-        @include respond(phone){
-            padding-right: 8rem; /* push to center so it's not obscured by the site nav button that has a higher z-index
-            padding-left:2rem; /* decrease to give text more room;
+       
+        @mixin phone{
+            padding-right: 8rem; /* push to center so it's not obscured by the site nav button that has a higher z-index */
+            padding-left:2rem; /* decrease to give text more room; */
         }
-        @include respond(sm-phone){
-            padding-left:8.5rem; /* prevent text from bleeding on the left on very small devices < 500px
+        @mixin sm-phone{
+            padding-left:8.5rem; /* prevent text from bleeding on the left on very small devices < 500px */
         }
-        */
+        
         &__checkbox {
             display: none;
         }

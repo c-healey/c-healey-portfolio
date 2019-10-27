@@ -1,6 +1,6 @@
 .navigation {
     position:fixed;
-    top:8rem;
+    top:6rem;
     right:6rem;
     z-index:110;
     display:grid;
@@ -8,16 +8,16 @@
     grid-template-columns: 1fr;
     justify-content: center;
     align-content: center;
-    /*
-    @include respond(tab-port){
+    
+    @mixin tab-port{
         top: 5rem;
         right: 5rem;
     }
-    @include respond(phone){
+    @mixin phone {
         top: 3.5rem;
         right: 3.5rem;
     }
-*/
+
    &__checkbox {
         display: none;
     }

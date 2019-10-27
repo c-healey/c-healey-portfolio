@@ -10,13 +10,13 @@
     -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
 
-    /* On small devices change the clippath to be less severe
-    @include respond(phone){
+    /* On small devices change the clippath to be less severe */
+    @mixin phone {
         -webkit-clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0,100% 0, 100% 85vh, 0 100%);
     }
-*/
-    grid-row:1/ 2;
+
+    grid-row: 1/2;
     grid-column: full-start/ full-end;
 
     display: grid;
@@ -35,7 +35,7 @@
 
     display:grid;
     grid-template-rows: min-content;
-    grid-template-columns: repeat(auto-fit, minmax(40rem,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(36rem,1fr));
 
     grid-column-gap: 6rem;
     grid-row-gap: 6rem;
@@ -105,14 +105,14 @@
     grid-row-gap:8rem;
     justify-content: center;
     align-content: center;
-/*
-    @include respond(tab-port){
+
+    @mixin tab-port {
         grid-row-gap:6rem;
         grid-column-gap:8rem;
     }
-    @include respond(phone){
+    @mixin phone {
         grid-row-gap:4rem;
         grid-column-gap:6rem;
     }
-    */
+    
 }

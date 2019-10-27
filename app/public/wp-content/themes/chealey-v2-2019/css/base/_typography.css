@@ -26,12 +26,12 @@ body {
         animation-name:moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
-    /*
-        @include respond(phone) {
+    
+        @mixin phone {
             letter-spacing: 1rem;
             
         }
-        */
+        
     }
     &--sub {
         grid-row:2/3;
@@ -42,11 +42,11 @@ body {
         font-weight: 700;
         letter-spacing: 1.74rem;
         animation:moveInRight  1s  ease-out;
-/*
-        @include respond(phone) {
+
+        @mixin phone {
             letter-spacing: .5rem;
         }
-        */
+        
     }
 }
 .heading--btn {
@@ -67,15 +67,15 @@ body {
         transform: skewY(2deg) skewX(15deg) scale(1.1);
         text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
     }
-    /*
-    @include respond(tab-port){
+    
+    @mixin tab-port {
         font-size: 3rem;
     }
 
-    @include respond(phone) {
+    @mixin phone {
         font-size: 2.5rem;
     } 
-    */ 
+     
 }
 .heading-tertiary {
     font-size: $default-font-size;

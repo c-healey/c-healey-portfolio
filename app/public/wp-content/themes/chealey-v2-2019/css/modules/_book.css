@@ -17,23 +17,23 @@
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
     
-/*
-    @include respond(tab-land) {
+
+    @mixin tab-land {
         background-image: linear-gradient(105deg, 
                     rgba($color-white, .9) 0%,
                     rgba($color-white, .9) 65%,
                     transparent 65%), 
-            url(../img/nat-10-small.jpg);
+            url(images/nat-10-small.jpg);
     }
 
-    @include respond(tab-port) {//900px
+    @mixin tab-port {/*900px */
         background-image: linear-gradient(to right, 
                     rgba($color-white, .9) 0%,
                     rgba($color-white, .9) 100%,
                     transparent 0%), 
-            url(../img/nat-10-small.jpg);
+            url(images/nat-10-small.jpg);
     }
-   */
+   
     &__form {
         display:grid;
         grid-template-columns: 1fr;
@@ -43,14 +43,14 @@
         align-content: center;
         width: 50%;
         padding: 6rem;
-        /*
-        @include respond(tab-land) {
+        
+        @mixin tab-land {
             width: 65%;
         }
-        @include respond(tab-port) {
+        @mixin tab-port {
             width: 100%;
         }
-        */
+        
     }
     &__heading {
         grid-row:1/2;
@@ -65,11 +65,11 @@
     &__call-me {
         color:$color-primary;
         font-size:4rem;
-        /*
-        @include respond(phone) {
+        
+        @mixin phone {
             font-size:2rem;
         }
-        */
+        
 
     }
 }

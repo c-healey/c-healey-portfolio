@@ -9,14 +9,14 @@ Text Domain: chealey v2 2019 child
 
 
 /* SASS and Global'ish Stuff */
+@import "/base/_mixins"; 
 @import "base/_variables";
 @import "base/_theme-variables";
 @import "base/_base";
 @import "base/_animations";
-
 @import "base/_typography";
-
 @import "base/_utilities";
+
 /*
 @import "base/_baseline";
 @import "base/_variables";
@@ -43,5 +43,5 @@ Text Domain: chealey v2 2019 child
 @import "modules/_home-sections";
 @import "modules/_navigation";
 @import "modules/_skills";
-@import "modules/_story";
+
 @import "modules/_work";
