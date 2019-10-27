@@ -118,3 +118,5 @@ Thumbs.db
 #!app/public/wp-content/plugins/example-plugin/
 !app/public/wp-content/themes/c-healey-portfolio-child/
 !app/public/wp-content/themes/c-healey-portfolio-child/*
+!app/public/wp-content/themes/chealey-v2-2019/
+!app/public/wp-content/themes/chealey-v2-2019/*

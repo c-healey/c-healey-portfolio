@@ -1,0 +1,18 @@
+.about {
+    &__heading {
+        grid-column:1/-1;
+        justify-self:center;
+    }
+    &__column { 
+        display:grid;
+        grid-template-rows: repeat(2, min-content) 1fr;
+        grid-row-gap: 1.5rem;
+        grid-template-columns: 1fr;
+        justify-content:left;
+        align-content: flex-start;
+    }  
+    &__btn {
+        justify-self:left;
+        align-self:end;
+    }
+}

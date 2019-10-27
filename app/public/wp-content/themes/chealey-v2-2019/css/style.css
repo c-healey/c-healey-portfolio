@@ -1,0 +1,47 @@
+/*
+Theme Name: chealey v2 2019 child
+Author:Cathy Healey
+Template: twentynineteen
+Version: 1.0.0
+Text Domain: chealey v2 2019 child
+*/
+/* 3rd party packages normalize is imported by 2019*/
+
+
+/* SASS and Global'ish Stuff */
+@import "base/_variables";
+@import "base/_theme-variables";
+@import "base/_base";
+@import "base/_animations";
+
+@import "base/_typography";
+
+@import "base/_utilities";
+/*
+@import "base/_baseline";
+@import "base/_variables";
+@import "base/_utility-classes";
+@import "/base/_mixins";  /* could not import comments in different format and will have to redefine mixins *
+@import "base/_theme-variables";
+*/
+
+
+
+/* BEM Blocks */
+
+@import "modules/_about";
+@import "modules/_bg-video";
+@import "modules/_book";
+@import "modules/_button";
+@import "modules/_card";
+@import "modules/_composition";
+@import "modules/_feature";
+@import "modules/_footer";
+@import "modules/_form";
+@import "modules/_gallery";
+@import "modules/_header";
+@import "modules/_home-sections";
+@import "modules/_navigation";
+@import "modules/_skills";
+@import "modules/_story";
+@import "modules/_work";

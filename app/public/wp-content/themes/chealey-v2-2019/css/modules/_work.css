@@ -1,0 +1,184 @@
+
+
+.work {
+    
+    /* 3 items in work section - heading, content and btn */
+    &__heading {
+        /*grid-row: 1/2;*/
+        grid-column: 1/-1;
+        justify-self:center; 
+    }
+    &__content { /* contains the image and the work nav both occupy the same row and column the 
+        nav sits atop the image ate the upper right
+        */
+        position:relative;
+        /*grid-row: 2/3;*/
+        grid-column: 1/-1;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        justify-content: center;
+        align-content: center;
+        overflow:hidden;
+    }
+  
+    &__btn {
+       /* grid-row: 3/4;*/
+        grid-column: 1/-1;
+        justify-self:center;
+    }
+    
+}
+.work__img { /* inside content div under .work-nav*/
+    grid-row:1/-1;
+    grid-column: 1/-1;
+    justify-self: center;
+    width: 100%;  
+}
+
+.work-nav { /*aligns the button, background and icon, row 2 for the excerpt/summary*/
+    
+
+     /*work-nav inside the content div*/
+        
+        grid-row:1/-1;
+        grid-column: 1/-1;
+        justify-self:end;
+        align-self: start;
+        padding: 2rem;
+        padding-left:8rem;
+        z-index:100;
+
+        display:grid;
+        grid-template-rows: repeat(2, min-content);
+        grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+        grid-template-rows: repeat(2, min-content);
+            grid-template-columns: 1fr min-content;
+        justify-content: center;
+        align-content: center;
+        z-index:100;
+      /*  
+        @include respond(phone){
+            padding-right: 8rem; /* push to center so it's not obscured by the site nav button that has a higher z-index
+            padding-left:2rem; /* decrease to give text more room;
+        }
+        @include respond(sm-phone){
+            padding-left:8.5rem; /* prevent text from bleeding on the left on very small devices < 500px
+        }
+        */
+        &__checkbox {
+            display: none;
+        }
+        
+        &__button {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self:end;
+
+            /* this is a grid to center  the icon or ? that sits on top*/
+            display:grid;
+            justify-content: center;
+            align-content: center;
+
+            background-color: $color-white;
+            height: 7rem;
+            width: 7rem;
+            border-radius: 50%;
+
+            z-index: 1000;
+            box-shadow: 0 1rem 3rem rgba($color-black, .1);
+            text-align: center;
+            cursor: pointer;
+        }
+        
+         &__background { /* this is the colored background button that expands radially when the button is clicked it hides behind the button */
+            grid-column: 1/2;
+            grid-row: 1/2;
+            justify-self:end;
+            margin-right: .25rem;  /* nudge it behind button */
+            margin-top: .25rem;
+            
+            height: 6rem;
+            width: 6rem;
+            border-radius: 50%;
+            
+            background-image: radial-gradient($color-primary-light, $color-primary-dark);
+            z-index: 500;
+            transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1); 
+         }
+         
+        &__nav { /*yet another container of questionable value 1 row 1 column */
+
+            grid-column: 1/2;
+            grid-row:2/3;
+
+            display:grid;
+            /**/grid-template-rows: repeat(2, min-content);
+            grid-template-columns: 1fr min-content;
+            grid-row-gap: .5rem;
+            justify-content: space-around;
+            align-content: center;
+
+            opacity: 0;
+            width: 0;
+            height:0;
+            /**/overflow:hidden;
+            
+            
+            transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+      
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        opacity: 1;
+        height:100%;
+        width: 100%;
+        z-index:1001;
+       
+    }
+        
+        /*ICON*/
+    
+        &__icon {
+            align-self:center;
+            justify-self:center;
+            font-size: 4rem;
+            color: $color-primary;
+    
+        }
+        
+        &__button:hover &__icon {
+            font-size: 5rem;
+        }
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+
+}
+
+.work {
+    &__txt-box{
+        color:#fff;
+        display:grid;
+        grid-gap:2rem;
+        
+    }
+    &__txt-heading {
+        
+        justify-self:left;
+        margin-bottom:1rem;
+    }
+    
+    &__paragraph {
+        
+        font-size:1.5rem;
+        margin-bottom:.5rem;
+    }
+}
+
+    
+    

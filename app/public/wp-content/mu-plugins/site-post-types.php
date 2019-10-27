@@ -3,17 +3,19 @@
  mu-plugins folder is part of wordpress heirarchy. All files and functions within the fole=der are included automagically and exist outside of the theme.
 */
 function site_post_types() {
-//jquery slide post type implementing slick slider
-	register_post_type('ch-slideshow', array(
+
+	register_post_type('gallery', array(
 		'supports'=> array('title', 'editor', 'thumbnail', 'excerpt'),
 		'public' => true,
 		'show_ui' => true,
+		'has_archive' => true,
+		'show_in_rest' => true, // required to use gutenberg editor along with 'editor' above
 		'labels' => array (
-			'name' => 'CH Slide',
-			'add_new_item' => 'Add New CH Slide',
-			'edit_item' => 'Edit CH Slide',
-			'all_items' => 'All CH Slides',
-			'singlar_name' => 'CH Slide'
+			'name' => 'Gallery',
+			'add_new_item' => 'Add New Gallery',
+			'edit_item' => 'Edit Gallery',
+			'all_items' => 'All Gallery',
+			'singlar_name' => 'Gallery'
 		),
 		'menu_icon' => 'dashicons-images-alt',
 	));
