@@ -40,5 +40,5 @@ function site_features(){
 }
 add_action( 'after_setup_theme', 'site_features' );
 add_action ('init', 'site_post_types');
-
+add_filter('wpcf7_autop_or_not', '__return_false');
 ?>

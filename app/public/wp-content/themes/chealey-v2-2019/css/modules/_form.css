@@ -14,10 +14,12 @@
         padding: 1.5rem 2rem;
         border-radius: 2px;
         background-color: rgba($color-white, .5);
+        background: rgba($color-white, .5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display:block;
+        margin-bottom: 3rem; /* fix for quick launch without folating labels */
         transition: all .3s;
 
         @mixin tab-port {
@@ -41,7 +43,8 @@
     
     }
 
-    &__label {
+    &__label,
+    .name__label {
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
@@ -49,7 +52,7 @@
         display: block;
         transition: all .3s;
     }
-    &__input:placeholder-shown + &__label {
+    &__input:placeholder-shown .name__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);

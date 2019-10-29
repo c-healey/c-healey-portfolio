@@ -1,4 +1,4 @@
-.btn {
+.btn, input[type="submit"] {
 
     &,
     &:link,
@@ -30,27 +30,6 @@
         transform: translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
     }
-    &--white {
-        background-color: $color-white;
-        color: $color-grey-dark;
-        &::after {
-            background-color: $color-white;
-        }
-        &, &:link, &:visited, &:hover, &:active {
-            color: $color-grey-dark;
-          }
-    }
-    &--green {
-        background-color: $color-primary;
-        color: $color-white;
-        &::after {
-            background-color: $color-primary;
-        }
-        &, &:link, &:visited, &:hover, &:active {
-            color: $color-white;
-          }
-        
-    }
     &:after {
         content:"";
         display:inline-block;
@@ -63,11 +42,50 @@
         z-index:-1;
         transition: all .4s;
     }
+}
+.btn {  
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+        &::after {
+            background-color: $color-white;
+        }
+        &, &:link, &:visited, &:hover, &:active {
+            color: $color-grey-dark;
+          }
+    }
+    &--green {
+        background-color: $color-primary;
+        background: $color-primary;
+        color: $color-white;
+        &::after {
+            background-color: $color-primary;
+        }
+        &, &:link, &:visited, &:hover, &:active {
+            color: $color-white;
+          }
+        
+    }
+
     
     
     &--animated {
         animation:moveInBottom  1s  ease-out, 75s;
         animation-fill-mode: backwards;
+    }
+}
+
+input[type="submit"]{
+    &,
+    &:link,
+    &:visited,
+    &:focus {
+        background: $color-primary;
+    }
+    &:hover{
+        background:$color-white;
+        color: $color-grey-dark-3;
+        
     }
 }
 .btn-txt {

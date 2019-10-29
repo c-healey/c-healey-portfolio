@@ -34,7 +34,7 @@ get_header();
     get_template_part('template-parts/content/content', 'attributes');
     get_template_part('template-parts/content/content', 'skills');
     get_template_part('template-parts/content/content', 'work-gallery');
-    get_template_part('template-parts/content/content', 'contact');
+    get_template_part('template-parts/content/content', 'contact-form-7');
     ?>
         
 </div> <!--container -->

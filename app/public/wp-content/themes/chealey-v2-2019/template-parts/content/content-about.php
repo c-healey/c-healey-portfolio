@@ -4,7 +4,7 @@
             <div class="about__column">
                     <h3 class="heading-tertiary">Career-wise</h3>
                     <p class="paragraph">I’m returning to my software development roots after a long break. I like the creativity in building things.  I like a degree of stability too.  When the 2007 great recession hit I was laid off when Cerberus acquired Chrysler from Daimler. My friends who stayed in development had work, I did not.  The demand for software developers is high and the obstacles to learning gone. I’m back doing one of my favorite things. </p>
-                    <a href="<?php echo site_url('/cv')?>" class="btn-txt about__btn">Curriculum Vitae &rarr;</a>
+                    <a href="https://linkedin.com/in/c-healey" class="btn-txt about__btn">Curriculum Vitae &rarr;</a>
             </div> 
             <div class="about__column">
                     <h3 class="heading-tertiary">Mom, wife, animal friend, label reader </h3>

@@ -51,6 +51,7 @@
             width: 100%;
         }
         
+        
     }
     &__heading {
         grid-row:1/2;
@@ -72,4 +73,7 @@
         
 
     }
+}
+#contact__submit--btn{
+ background:orangered;
 }

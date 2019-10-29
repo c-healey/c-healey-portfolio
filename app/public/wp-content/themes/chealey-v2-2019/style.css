@@ -521,16 +521,19 @@ body {
         padding: 6rem;
         /*900px */
         
+        
     }
 @media only screen and (max-width: 75em) {
 .book__form {
             width: 65%
+        
         
     }}
 /*1200px */
 @media only screen and (max-width: 56.25em) {
 .book__form {
             width: 100%
+        
         
     }}
 .book__heading {
@@ -557,9 +560,15 @@ body {
         
 
     }}
+#contact__submit--btn{
+ background:orangered;
+}
 .btn,
     .btn:link,
-    .btn:visited {
+    .btn:visited,
+    input[type="submit"],
+    input[type="submit"]:link,
+    input[type="submit"]:visited {
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
@@ -574,22 +583,37 @@ body {
         border: none;
         cursor: pointer;
     }
-.btn:hover{
+.btn:hover,input[type="submit"]:hover{
         -webkit-transform: translateY(-.3rem);
                 transform: translateY(-.3rem);
         box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
     }
-.btn:hover::after {
+.btn:hover::after, input[type="submit"]:hover::after {
             -webkit-transform: scale(1.5);
                     transform: scale(1.5);
             opacity:0;
         }
 .btn:active, 
-    .btn:focus {
+    .btn:focus, 
+    input[type="submit"]:active, 
+    input[type="submit"]:focus {
         outline: none;
         -webkit-transform: translateY(-.1rem);
                 transform: translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    }
+.btn:after, input[type="submit"]:after {
+        content:"";
+        display:inline-block;
+        height:100%;
+        width:100%;
+        border-radius: 10rem;
+        position:absolute;
+        top:0;
+        left: 0;
+        z-index:-1;
+        -webkit-transition: all .4s;
+        transition: all .4s;
     }
 .btn--white {
         background-color: #fff;
@@ -603,6 +627,7 @@ body {
           }
 .btn--green {
         background-color: #5643fa;
+        background: #5643fa;
         color: #fff;
         
     }
@@ -612,24 +637,22 @@ body {
 .btn--green, .btn--green:link, .btn--green:visited, .btn--green:hover, .btn--green:active {
             color: #fff;
           }
-.btn:after {
-        content:"";
-        display:inline-block;
-        height:100%;
-        width:100%;
-        border-radius: 10rem;
-        position:absolute;
-        top:0;
-        left: 0;
-        z-index:-1;
-        -webkit-transition: all .4s;
-        transition: all .4s;
-    }
 .btn--animated {
         -webkit-animation:moveInBottom  1s  ease-out, 75s;
                 animation:moveInBottom  1s  ease-out, 75s;
         -webkit-animation-fill-mode: backwards;
                 animation-fill-mode: backwards;
+    }
+input[type="submit"],
+    input[type="submit"]:link,
+    input[type="submit"]:visited,
+    input[type="submit"]:focus {
+        background: #5643fa;
+    }
+input[type="submit"]:hover{
+        background:#fff;
+        color: #333;
+        
     }
 .btn-txt:link,
     .btn-txt:visited {
@@ -1082,10 +1105,12 @@ body {
         padding: 1.5rem 2rem;
         border-radius: 2px;
         background-color: rgba(255,255,255, .5);
+        background: rgba(255,255,255, .5);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display:block;
+        margin-bottom: 3rem; /* fix for quick launch without folating labels */
         -webkit-transition: all .3s;
         transition: all .3s;
     
@@ -1107,7 +1132,8 @@ body {
 .form__input::-webkit-input-placeholder {
             color: #999;
         }
-.form__label {
+.form__label,
+    .form .name__label {
         font-size: 1.2rem;
         font-weight: 700;
         margin-left: 2rem;
@@ -1116,7 +1142,7 @@ body {
         -webkit-transition: all .3s;
         transition: all .3s;
     }
-.form__input:placeholder-shown + .form__label {
+.form__input:placeholder-shown .name__label {
         opacity: 0;
         visibility: hidden;
         -webkit-transform: translateY(-4rem);
