@@ -14,8 +14,13 @@
             <h3 class="heading-tertiary"><?php the_title(); ?></h3>
             <p><?php echo wp_trim_words(get_the_content(), 18);?></p>
             <div class="gallery__item-overlay-btn-box">
+            <div>
                 <a href="<?php echo get_field('project_url') ?>" class="btn-txt col-1">Visit Site</a>
+                </div><div>
+                <a href="<?php echo get_field('repo_url') ?>" class="btn-txt col-1">Repo</a>
+                </div><div>
                 <a href="<?php the_permalink() ?>" class="btn-txt col-2">Learn more</a>
+                </div>
             </div>
         </div>
 </figure>

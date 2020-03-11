@@ -1,14 +1,12 @@
 .gallery {
-    background-color: $color-grey-light-1;
-    grid-column: full-start / full-end;
+  background-color: $color-grey-light-1;
+  grid-column: full-start / full-end;
 
-    display: grid;
-    grid-template-columns: repeat(
-        auto-fit, 
-        minmax(36rem, 1fr));
-    /*grid-template-rows: repeat(3, min-content); */
-    grid-gap: 1rem;
-    /*
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  /*grid-template-rows: repeat(3, min-content); */
+  grid-gap: 1rem;
+  /*
     @media only screen and (max-width:$bp-medium) {
         grid-gap: 5px;
     }
@@ -16,130 +14,125 @@
         grid-gap: 2px;
     }
 */
-    &__work {
-        
-        grid-row-gap: 6rem;
+  &__work {
+    grid-row-gap: 6rem;
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+  &__item {
+    position: relative;
+    transition: all 0.2s;
+    &:hover > .gallery__item-overlay {
+      visibility: visible;
+      opacity: 1;
     }
-    &__img {
-        width: 100%;
-        height:100%;
-        display: block;
-        object-fit: cover;
-        
-    }
-    &__item {
-        position:relative;
-        transition:all .2s;
-        &:hover > .gallery__item-overlay {
-            visibility:visible;
-            opacity:1;
-        }
-        
-        
-        &-overlay {
-            position: absolute;
-            top: 1rem;
-            bottom: 1rem;
-            right: 1rem;
-            left:1rem;
-            padding:2rem;
-            background-color: rgba($color-white, .8);
-            border-radius: 5px;
-            visibility:hidden;
-            opacity: 0;
-            display:grid;
-            grid-template-columns: 1fr;
-            grid-row-gap:1rem;
-            
-            justify-content: center;
-            align-content: stretch;
-            font-size: $default-font-size;
-            a {
-                align-self:end;
-                justify-self:center;
-            } 
-            &-btn-box{
-                justify-self:center;
-                display:grid;
-                grid-template-columns: repeat (2, 1fr);
-                justify-content: center;
-                align-content: center;
-                grid-column-gap:6rem;
-            }
 
-        }
-    
+    &-overlay {
+      position: absolute;
+      top: 1rem;
+      bottom: 1rem;
+      right: 1rem;
+      left: 1rem;
+      padding: 2rem;
+      background-color: rgba($color-white, 0.8);
+      border-radius: 5px;
+      visibility: hidden;
+      opacity: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 1rem;
+
+      justify-content: center;
+      align-content: stretch;
+      font-size: $default-font-size;
+      a {
+        align-self: end;
+        justify-self: center;
+      }
+      &-btn-box {
+        justify-self: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-content: center;
+        grid-column-gap: 6rem;
+      }
     }
+  }
 }
 .gallery__single {
-    &--header { 
-        position:relative;
-        grid-row: 1/2;
-        grid-column: center-start/center-end;
-        align-self:center;
-        
-        display:grid;
-        grid-template-columns:  minmax(34rem, max-content);
-        grid-row-gap:1rem;
-        justify-content: center;
-        align-content: stretch;
-        z-index:10;
-        color: $color-grey-light-1;
-       /* background-color: rgba($color-primary, .25);
+  &--header {
+    position: relative;
+    grid-row: 1/2;
+    grid-column: center-start/center-end;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: minmax(34rem, max-content);
+    grid-row-gap: 1rem;
+    justify-content: center;
+    align-content: stretch;
+    z-index: 10;
+    color: $color-grey-light-1;
+    /* background-color: rgba($color-primary, .25);
         border-radius: 5px;
         padding: 10px;
         */
-    }
+  }
   /* classes within the header section*/
 
-    &--heading {
-        grid-column: 1/-1;
-        justify-self:center; 
-        align-self:center;
-    }
-    &--excerpt {
-        grid-column: 1/-1;
-        animation:moveInRight  1s  ease-out;
-    }
+  &--heading {
+    grid-column: 1/-1;
+    justify-self: center;
+    align-self: center;
+  }
+  &--excerpt {
+    grid-column: 1/-1;
+    animation: moveInRight 1s ease-out;
+  }
 
-   
-    &-canvas {
-        grid-row:1/2;
-        grid-column: full-start/full-end;
-        justify-self: center;
-        height: 100vh;
-        width: 100%;
-        background-size: cover;
-    
-        background-image: linear-gradient(to right bottom, 
-            $color-primary-light, 
-            $color-primary-dark);
-            position : relative;
-            -webkit-clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
-            clip-path: polygon(0 0,100% 0, 100% 75vh, 0 100%);
-    }
-    &-img { 
-        width: 100%;
-        height:100%;
-        display: block;
-        object-fit: cover;
-        opacity: 0.25;
-    }
-    /*content below the header*/
-    &--content { 
-        position:relative;
-        grid-row: 2/3;
-        grid-column: center-start/center-end;
-        align-self:center;
-        
-        display:grid;
-        grid-template-columns: 1fr;
-        grid-row-gap:1rem;
-        justify-content: center;
-        align-content: start;
-        z-index:10;
-        color: $color-grey-dark-3;
-        font-size: $default-font-size;
-    }
+  &-canvas {
+    grid-row: 1/2;
+    grid-column: full-start/full-end;
+    justify-self: center;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
 
+    background-image: linear-gradient(
+      to right bottom,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  }
+  &-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    opacity: 0.25;
+  }
+  /*content below the header*/
+  &--content {
+    position: relative;
+    grid-row: 2/3;
+    grid-column: center-start/center-end;
+    align-self: center;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 1rem;
+    justify-content: center;
+    align-content: start;
+    z-index: 10;
+    color: $color-grey-dark-3;
+    font-size: $default-font-size;
+  }
 }
